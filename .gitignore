@@ -159,23 +159,57 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Other
-*vscode*
-*egg*
-*nfs*
-*conv.json*
-*rebuttal*
-*.log*
-*remove_files*
-*wandb*
-*tmp*
-*vscode*
-*.csv
-*avoid_samples*
-*logs*
-*results*
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+.nfs*
+
+# Local environments and secrets
+.env.*
+!.env.example
+
+# Training logs and experiment trackers
+logs/
+runs/
+wandb/
+lightning_logs/
+tensorboard/
+events.out.tfevents*
+*.log
+
+# Temporary and cache files
+tmp/
+temp/
+*.tmp
 *.pickle
 *.pkl
+
+# Model checkpoints and large weights
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+
+# Generated training outputs
+outputs/
+predictions/
+avoid_samples/
+remove_files/
+
+# Keep curated result summaries (CSV/JSON/images) trackable.
+# Add individual large result directories here when necessary.
+
+# Project-specific generated/private artifacts
+*conv.json*
+*rebuttal*
 *internal*
 *test.png*
-assets/reward_assets
+assets/reward_assets/
+
+# Training datasets
+data/
+
+# Backup files
+*.bak
